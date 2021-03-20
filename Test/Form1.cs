@@ -7,14 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OleDb;
 namespace Test
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        DBAcces DateBase;
+        public Form1(DBAcces Base)
         {
             InitializeComponent();
+            DateBase = Base;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            OleDbDataReader Result = DateBase.GetSites();
+            listBox1.Items.Clear();
+            while (Result.Read())
+            {
+                listBox1.Items.Add(Result[0].ToString() + " " + Result[1].ToString());
+            }
+            Result.Close();
         }
     }
 }

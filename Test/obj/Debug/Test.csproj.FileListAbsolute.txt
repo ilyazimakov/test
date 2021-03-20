@@ -1,0 +1,11 @@
+C:\Users\Илья\Desktop\ТЗ\Test\Test\bin\Debug\SitesDB.accdb
+C:\Users\Илья\Desktop\ТЗ\Test\Test\bin\Debug\Test.exe.config
+C:\Users\Илья\Desktop\ТЗ\Test\Test\bin\Debug\Test.exe
+C:\Users\Илья\Desktop\ТЗ\Test\Test\bin\Debug\Test.pdb
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.Form1.resources
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.exe
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.pdb

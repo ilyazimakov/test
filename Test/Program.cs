@@ -14,9 +14,13 @@ namespace Test
         [STAThread]
         static void Main()
         {
+            DBAcces DataBase = new DBAcces();
+            DataBase.myConnection = new System.Data.OleDb.OleDbConnection(DataBase.connectString);
+            DataBase.myConnection.Open();
+ 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(DataBase));
         }
     }
 }
