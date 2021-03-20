@@ -41,8 +41,18 @@ namespace Test
             form2.DataBase = DateBase;
             form2.form1 = this;
             form2.Show();
-            
+        }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.DataBase = DateBase;
+            form3.form1 = this;
+            string NameAndStatus = listBox1.SelectedItem.ToString();
+            string[] SplittedString = NameAndStatus.Split(' ');
+           
+          form3.SiteName = SplittedString[0]; 
+           form3.Show();
         }
     }
 }
