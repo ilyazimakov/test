@@ -9,3 +9,4 @@ C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.csproj.GenerateResource.
 C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.exe
 C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.pdb
+C:\Users\Илья\Desktop\ТЗ\Test\Test\obj\Debug\Test.Form2.resources

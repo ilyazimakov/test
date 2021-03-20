@@ -34,5 +34,15 @@ namespace Test
             }
             Result.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.DataBase = DateBase;
+            form2.form1 = this;
+            form2.Show();
+            
+
+        }
     }
 }

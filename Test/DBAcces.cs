@@ -15,6 +15,15 @@ namespace Test
             OleDbDataReader reader = command.ExecuteReader();
             return reader;
         }
+        public void WriteSites(string geturl,string getname,string gettime)
+        {
+
+            string query = "INSERT INTO Sites (URL_DB,SiteName_DB,TimeToRefresh_DB) VALUES ('" + geturl + "','"
+                + getname + "','" +gettime + "')";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.ExecuteNonQuery();
+
+        }
     }
     
 }
