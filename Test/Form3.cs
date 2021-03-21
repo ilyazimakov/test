@@ -28,6 +28,7 @@ namespace Test
             result.Read();
             textBox1.Text = result[0].ToString();
             textBox3.Text = result[1].ToString();
+            result.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Data.OleDb;
 namespace Test
@@ -13,10 +13,12 @@ namespace Test
     public partial class Form1 : Form
     {
         DBAcces DateBase;
-        public Form1(DBAcces Base)
+        Thread secondthread;
+        public Form1(DBAcces Base,Thread thread)
         {
             InitializeComponent();
             DateBase = Base;
+            secondthread = thread;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,11 +50,28 @@ namespace Test
             Form3 form3 = new Form3();
             form3.DataBase = DateBase;
             form3.form1 = this;
-            string NameAndStatus = listBox1.SelectedItem.ToString();
-            string[] SplittedString = NameAndStatus.Split(' ');
+            try
+            {
+                string NameAndStatus = listBox1.SelectedItem.ToString();
+                string[] SplittedString = NameAndStatus.Split(' ');
+                form3.SiteName = SplittedString[0];
+                form3.Show();
+            }
+            catch
+            {
+
+            }
+                
            
-          form3.SiteName = SplittedString[0]; 
-           form3.Show();
+          
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            secondthread.Abort();
+            timer1.Stop();
+            DateBase.myConnection.Close();
+            
         }
     }
 }
